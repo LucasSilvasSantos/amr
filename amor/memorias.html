@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nossas Memórias</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <style>
+    body {
+      background: linear-gradient(to bottom, #fff, #ffe4e1);
+      font-family: 'Georgia', serif;
+    }
+    .swiper-slide img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      border: 2px solid black; /* Borda rosa sutil */
+    }
+  </style>
+</head>
+<body class="p-4">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold text-center text-pink-600 mb-4">Nossas Memórias</h1>
+    <p class="text-center text-gray-600 mb-6">Cada momento com você é um tesouro!</p>
+    
+    <!-- Carrossel -->
+    <div class="swiper mySwiper mb-8">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="fotoss/carrosel.jpg" alt="Momento 1"></div>
+        <div class="swiper-slide"><img src="fotoss/carrosel2.jpg" alt="Momento 2"></div>
+        <div class="swiper-slide"><img src="fotoss/Carrosel3.jpg" alt="Momento 3"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Galeria Vertical -->
+    <div class="gallery flex flex-col items-center">
+      <img src="fotoss/foto principal vertical.jpg" alt="Foto 4">
+      <img src="fotoss/vertical2.jpg" alt="Foto 5">
+      <img src="fotoss/vertical3.jpg" alt="Foto 6">
+      <img src="fotoss/vertical1.jpg" alt="Foto 7">
+      <img src="fotoss/vertical4.jpg" alt="Foto 8">
+      <img src="fotoss/vertical5.jpg" alt="Foto 9">
+      <img src="fotoss/vertical6.jpg" alt="Foto 10">
+      <img src="fotoss/vertical7.jpg" alt="Foto 11">
+      <img src="fotoss/vertical8.jpg" alt="Foto 12">
+      <img src="fotoss/vertical9.jpg" alt="Foto 13">
+      <img src="fotoss/vertical10.jpg" alt="Foto 14">
+      <img src="fotoss/vertical11.jpg" alt="Foto 15">
+    </div>
+
+    <div class="mt-6 text-center space-x-4">
+      <a href="login.html" class="text-pink-500 hover:underline">Voltar</a>
+      <a href="vouchers.html" class="text-pink-500 hover:underline">Ver seus presentinhos</a>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.mySwiper', {
+      loop: true,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: { delay: 3000 },
+    });
+  </script>
+</body>
+</html>
